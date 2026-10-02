@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CurrículoFácil — Gerador de Currículo Online e Grátis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ════ CABEÇALHO ════ -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <div class="logo">
+        <span class="logo-icon">📄</span>
+        <span class="logo-text">Currículo<strong>Fácil</strong></span>
+      </div>
+      <nav class="site-nav">
+        <a href="#como-funciona">Como funciona</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ════ HERO ════ -->
+  <div class="hero">
+    <div class="hero__inner">
+      <h1>Gerador de Currículo<br>Online e Grátis</h1>
+      <p>Preencha os campos passo a passo e baixe seu currículo profissional em PDF — sem cadastro, sem custo, em minutos.</p>
+      <a href="#wizard" class="hero-btn">Criar meu currículo agora →</a>
+    </div>
+  </div>
+
+  <!-- ════ COMO FUNCIONA ════ -->
+  <section class="how-section" id="como-funciona">
+    <div class="how-inner">
+
+      <div class="how-text">
+        <h2>Como funciona</h2>
+        <p class="how-subtitle">Simples, rápido e gratuito. Em menos de 5 minutos você tem um currículo pronto para enviar para empresas.</p>
+
+        <div class="how-steps">
+          <div class="how-step">
+            <div class="how-num">1</div>
+            <div>
+              <strong>Preencha seus dados pessoais</strong>
+              <p>Informe nome, contato, endereço e informações básicas no primeiro passo do formulário.</p>
+            </div>
+          </div>
+          <div class="how-step">
+            <div class="how-num">2</div>
+            <div>
+              <strong>Adicione experiências e formação</strong>
+              <p>Insira seus empregos anteriores, suas funções, e os cursos e instituições onde se formou.</p>
+            </div>
+          </div>
+          <div class="how-step">
+            <div class="how-num">3</div>
+            <div>
+              <strong>Avance pelas etapas</strong>
+              <p>Use os botões Próximo e Voltar para navegar entre as seções do formulário.</p>
+            </div>
+          </div>
+          <div class="how-step">
+            <div class="how-num">4</div>
+            <div>
+              <strong>Baixe em PDF</strong>
+              <p>Clique em "Baixar PDF" e receba o arquivo pronto para enviar para recrutadores e empresas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Exemplo de currículo -->
+      <div class="how-sample">
+        <div class="sample-label">Exemplo de currículo gerado</div>
+        <div class="sample-card">
+          <div class="sc-name">Maria Oliveira Santos</div>
+          <div class="sc-info">Nacionalidade: Brasileira &nbsp;|&nbsp; Idade: 29 anos &nbsp;|&nbsp; Estado Civil: Solteiro(a)</div>
+          <div class="sc-info">Endereço: Rua das Flores, 200, Curitiba, PR</div>
+          <div class="sc-bar">
+            <span>✉ maria.oliveira@email.com</span>
+            <span>☎ (41) 9 0000-0000</span>
+          </div>
+          <div class="sc-section">Objetivo</div>
+          <div class="sc-body">Profissional com experiência em rotinas administrativas, buscando oportunidade de crescimento onde possa contribuir com organização e comprometimento.</div>
+          <div class="sc-section">Formação acadêmica</div>
+          <div class="sc-row"><span class="sc-lbl">Curso</span><span class="sc-val bold">Técnico em Administração</span></div>
+          <div class="sc-row"><span class="sc-lbl">Instituição</span><span class="sc-val">SENAI</span></div>
+          <div class="sc-row"><span class="sc-lbl">Conclusão</span><span class="sc-val">2019</span></div>
+          <div class="sc-section">Experiência</div>
+          <div class="sc-row"><span class="sc-lbl">Cargo</span><span class="sc-val bold">Auxiliar Administrativo</span></div>
+          <div class="sc-row"><span class="sc-lbl">Empresa</span><span class="sc-val">Grupo Horizonte Ltda.</span></div>
+          <div class="sc-row"><span class="sc-lbl">Período</span><span class="sc-val">2020 – 2024</span></div>
+          <div class="sc-row"><span class="sc-lbl">Funções</span><span class="sc-val">Organização de documentos, atendimento ao cliente e emissão de notas fiscais.</span></div>
+          <div class="sc-section">Habilidades</div>
+          <div class="sc-body">Pacote Office &nbsp;•&nbsp; Atendimento ao cliente &nbsp;•&nbsp; Organização &nbsp;•&nbsp; Excel intermediário</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════ WIZARD ════ -->
+  <main class="wizard-wrapper" id="wizard">
+
+    <!-- Barra de progresso -->
+    <div class="progress-bar">
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <div class="steps" id="stepsNav">
+        <div class="step active" data-step="1" onclick="goToStep(1)">
+          <div class="step-circle"><span class="step-icon">✓</span><span class="step-num">1</span></div>
+          <span class="step-label">Dados Pessoais</span>
+        </div>
+        <div class="step" data-step="2" onclick="goToStep(2)">
+          <div class="step-circle"><span class="step-icon">✓</span><span class="step-num">2</span></div>
+          <span class="step-label">Experiência</span>
+        </div>
+        <div class="step" data-step="3" onclick="goToStep(3)">
+          <div class="step-circle"><span class="step-icon">✓</span><span class="step-num">3</span></div>
+          <span class="step-label">Formação acadêmica</span>
+        </div>
+        <div class="step" data-step="4" onclick="goToStep(4)">
+          <div class="step-circle"><span class="step-icon">✓</span><span class="step-num">4</span></div>
+          <span class="step-label">Informações adicionais</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── ETAPA 1 — Dados Pessoais ── -->
+    <div class="wizard-step active" id="step1">
+      <div class="card">
+        <div class="card-tab">1.1 Identificação</div>
+        <div class="card-body">
+          <div class="form-grid">
+            <div class="field full">
+              <label>Nome Completo <span class="req">*</span></label>
+              <input type="text" id="name" placeholder="Ex: Maria Oliveira Santos" />
+            </div>
+            <div class="field">
+              <label>Nacionalidade</label>
+              <input type="text" id="nationality" placeholder="Ex: Brasileira" />
+            </div>
+            <div class="field">
+              <label>Idade</label>
+              <input type="text" id="age" placeholder="Ex: 29 anos" />
+            </div>
+            <div class="field">
+              <label>Gênero</label>
+              <select id="gender">
+                <option value="">Selecione...</option>
+                <option>Masculino</option>
+                <option>Feminino</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Estado Civil</label>
+              <select id="marital">
+                <option value="">Selecione...</option>
+                <option>Solteiro(a)</option>
+                <option>Casado(a)</option>
+                <option>Divorciado(a)</option>
+                <option>Viúvo(a)</option>
+                <option>União estável</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-tab">1.2 Contato</div>
+        <div class="card-body">
+          <div class="form-grid">
+            <div class="field">
+              <label>Email <span class="req">*</span></label>
+              <input type="email" id="email" placeholder="Ex: maria.oliveira@email.com" />
+            </div>
+            <div class="field">
+              <label>Telefone</label>
+              <input type="tel" id="phone" placeholder="(DDD) 9 0000-0000" />
+            </div>
+            <div class="field">
+              <label>LinkedIn</label>
+              <input type="text" id="linkedin" placeholder="Ex: linkedin.com/in/maria-oliveira" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-tab">1.3 Endereço</div>
+        <div class="card-body">
+          <div class="form-grid">
+            <div class="field full">
+              <label>Endereço completo</label>
+              <input type="text" id="address" placeholder="Ex: Rua das Flores, 200, Bairro Centro" />
+            </div>
+            <div class="field">
+              <label>Cidade / Estado</label>
+              <input type="text" id="city" placeholder="Ex: Curitiba, PR" />
+            </div>
+            <div class="field">
+              <label>CEP</label>
+              <input type="text" id="cep" placeholder="Ex: 80000-000" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wizard-actions">
+        <button class="btn-next" onclick="goToStep(2)">Próximo →</button>
+      </div>
+    </div>
+
+    <!-- ── ETAPA 2 — Experiência ── -->
+    <div class="wizard-step" id="step2">
+      <div class="card">
+        <div class="card-tab">2.1 Experiência Profissional</div>
+        <div class="card-body">
+          <div id="experienceList"></div>
+          <button type="button" class="btn-add" onclick="addExperience()">+ Adicionar Experiência</button>
+        </div>
+      </div>
+      <div class="wizard-actions">
+        <button class="btn-back" onclick="goToStep(1)">← Voltar</button>
+        <button class="btn-next" onclick="goToStep(3)">Próximo →</button>
+      </div>
+    </div>
+
+    <!-- ── ETAPA 3 — Formação ── -->
+    <div class="wizard-step" id="step3">
+      <div class="card">
+        <div class="card-tab">3.1 Formação Acadêmica</div>
+        <div class="card-body">
+          <div id="educationList"></div>
+          <button type="button" class="btn-add" onclick="addEducation()">+ Adicionar Formação</button>
+        </div>
+      </div>
+      <div class="wizard-actions">
+        <button class="btn-back" onclick="goToStep(2)">← Voltar</button>
+        <button class="btn-next" onclick="goToStep(4)">Próximo →</button>
+      </div>
+    </div>
+
+    <!-- ── ETAPA 4 — Informações Adicionais ── -->
+    <div class="wizard-step" id="step4">
+      <div class="card">
+        <div class="card-tab">4.1 Objetivo Profissional</div>
+        <div class="card-body">
+          <div class="field">
+            <label>Descreva seu objetivo em 1-3 frases</label>
+            <textarea id="objective" rows="5" placeholder="Ex: Profissional com sólida experiência em rotinas administrativas, buscando oportunidade de crescimento em empresa dinâmica para contribuir com organização, eficiência e comprometimento."></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-tab">4.2 Habilidades</div>
+        <div class="card-body">
+          <div class="field">
+            <label>Liste suas habilidades separadas por vírgula</label>
+            <input type="text" id="skills" placeholder="Ex: Pacote Office, Atendimento ao cliente, Organização, Excel intermediário, Comunicação, Trabalho em equipe" />
+          </div>
+        </div>
+      </div>
+
+      <div class="wizard-actions">
+        <button class="btn-back" onclick="goToStep(3)">← Voltar</button>
+        <button class="btn-preview" onclick="showPreview()">👁 Visualizar prévia</button>
+        <button class="btn-generate" onclick="generatePDF()">⬇ Baixar PDF</button>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ════ MODAL DE PRÉVIA ════ -->
+  <div class="preview-overlay" id="previewOverlay" onclick="overlayClose(event)">
+    <div class="preview-modal">
+      <div class="preview-modal-header">
+        <span>Prévia do Currículo</span>
+        <button class="preview-close" onclick="closePreview()">✕</button>
+      </div>
+      <div class="preview-modal-body" id="previewContent"></div>
+      <div class="preview-modal-footer">
+        <button class="btn-generate" onclick="generatePDF()">⬇ Baixar PDF</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════ RODAPÉ ════ -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-icon">📄</span>
+          <span class="logo-text">Currículo<strong>Fácil</strong></span>
+        </div>
+        <p>Crie seu currículo profissional de graça, em minutos, sem precisar se cadastrar.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Links</h4>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#wizard">Criar currículo</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 CurrículoFácil — Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
